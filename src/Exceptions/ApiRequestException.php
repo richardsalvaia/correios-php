@@ -13,8 +13,8 @@ class ApiRequestException extends \RuntimeException
     {
         $message = 'Não foi possível realizar a requisição. Por favor, verifique os parâmetros enviados';
 
-        if (isset($response->msgs)) {
-            $message = end($response->msgs);
+        if (isset(end($response)->txErro)) {
+            $message = end($response)->txErro;
         }
 
         return $message;

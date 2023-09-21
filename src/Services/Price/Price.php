@@ -55,15 +55,15 @@ class Price extends AbstractRequest
     private function setOptionalParams(Product $product, array $productParam): array
     {
         if ($product->getWidth() > 0) {
-            $productParam['width'] = $product->getWidth();
+            $productParam['largura'] = $product->getWidth();
         }
 
         if ($product->getHeight() > 0) {
-            $productParam['height'] = $product->getHeight();
+            $productParam['altura'] = $product->getHeight();
         }
 
         if ($product->getLength() > 0) {
-            $productParam['length'] = $product->getLength();
+            $productParam['comprimento'] = $product->getLength();
         }
 
         if ($product->getDiameter() > 0) {
